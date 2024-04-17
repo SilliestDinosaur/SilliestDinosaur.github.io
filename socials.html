@@ -19,7 +19,7 @@
             min-height: 100vh; /* Ensure the body takes up the full viewport height */
         }
         .container {
-            flex: 1; /* Occupy remaining vertical space */
+            flex: 0.5; /* Occupy remaining vertical space */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -44,20 +44,10 @@
             margin: 0 10px;
         }
         .social-links li a {
-            display: block;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: #AC87C5; /* Purple background color */
-            text-align: center;
-            line-height: 50px;
-            color: #fff; /* White text color */
-            font-size: 24px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
+            transition: opacity 0.3s ease;
         }
         .social-links li a:hover {
-            background-color: #8C5A99; /* Darker purple background color on hover */
+            opacity: 0.7;
         }
         .section {
             margin-bottom: 40px;
@@ -138,17 +128,24 @@
         <a href="index.html"><div class="icon"></div></a>
     </div>
     <div class="container">
-        <h1>Social Media Hub</h1>
+        <h1>My Social Media</h1>
         <ul class="social-links">
-            <li><a href="#">F</a></li>
-            <li><a href="#">T</a></li>
-            <li><a href="#">I</a></li>
+            <li>
+                <a href="https://steamcommunity.com/id/dinotick/"><img src ="assets/icons/steamicon.png" width="80px" height="80px"></a>
+            </li>
+            <li><a href="https://twitter.com/SillyDinoCat"><img src ="assets/icons/twittericon.png" width="80px" height="80px"></a></li>
+            <li><a href="https://github.com/SilliestDinosaur"><img src ="assets/icons/githubicon.png" width="80px" height="80px"></a></li>
+            <li><a href="https://www.youtube.com/channel/UCpiaFbECCQ5whxLmdbdXmMA"><img src ="assets/icons/youtubeicon.png" width="80px" height="80px"></a></li>
             <!-- Add more social media links as needed -->
         </ul>
         <div class="section">
             <h3 class="section-content">Been trying to startup my youtube for a longtime, however I commonly post on my Twitter and I am active on my Discord account. 
                 If you want to friend me on Steam, go ahead however don't be weird and try to be polite. 
-                I may not respond or accept any friend requests if I do not know who you are.</h3>
+                I may not respond or accept any friend requests if I do not know who you are. 
+                If I startup my YouTube again, subscribing would be appreciated, as I put alot of effort into my projects per usual. 
+            If and when I get back into content creation, I'll probably make some videos on things I enjoy such as 3D Printing, Video Game Modding, or BONELAB.
+        I try my best to make the best videos I can when I can, but no promises ;)</h3>
+
         </div>
     </div>
     <div class="navbar">
