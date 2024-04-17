@@ -65,32 +65,20 @@
             background-image: url('assets/icons/caticon.png');
             background-size: cover;
             background-position: center;
-            user-drag: none; /* Make the icon not draggable */
-            -webkit-user-drag: none; /* For older versions of Safari */
-        }
-        .centered-text {
-            text-align: center; /* Center the text horizontally */
-            font-size: 120px;
-            font-weight: bold;
-            color: #AC87C5; /* Blue text color */
-            padding: 20px;
-            margin-top: 50vh; /* Vertically center the text based on viewport height */
-            transform: translateY(-70%); /* Correct vertical centering */
-            transition: text-shadow 0.3s ease; /* Smooth transition for text shadow */
+            transition: opacity 0.3s ease; /* Smooth transition for text shadow */
             cursor: pointer; /* Change cursor to pointer on hover */
             user-drag: none; /* Make the icon not draggable */
             -webkit-user-drag: none; /* For older versions of Safari */
         }
-        .centered-text:hover {
-            text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4); /* Larger text shadow on hover */
+        .icon:hover {
+            opacity: 0.7; /* Reduce opacity on hover for visual feedback */
         }
     </style>
 </head>
 <body>
     <div class="top-bar">
-        <div class="icon"></div>
+        <a href="index.html"><div class="icon"></div></a>
     </div>
-    <div class="centered-text">DINOCAT</div>
     <div class="container">
         <!-- Content of your homepage here -->
         <div class="content">

@@ -3,32 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Socials</title>
+    <title>Social Media Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #FFE5E5; /* Cream white */
             margin: 0;
+            font-family: "Josefin Sans", sans-serif;
             padding: 0;
-            font-family: 'Arial', sans-serif;
             color: #555; /* Dark gray text */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes up the full viewport height */
         }
         .container {
             flex: 1; /* Occupy remaining vertical space */
             display: flex;
             flex-direction: column;
-        }
-        .content {
-            flex: 1;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #AC87C5; /* Purple text color */
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .social-links {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .social-links li {
+            margin: 0 10px;
+        }
+        .social-links li a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #AC87C5; /* Purple background color */
+            text-align: center;
+            line-height: 50px;
+            color: #fff; /* White text color */
+            font-size: 24px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .social-links li a:hover {
+            background-color: #8C5A99; /* Darker purple background color on hover */
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-heading {
+            font-size: 24px;
+            color: #AC87C5; /* Purple text color */
+            margin-bottom: 10px;
+        }
+        .section-content {
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #AC87C5; /* Purple background color */
+            color: #fff; /* White text color */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #8C5A99; /* Darker purple background color on hover */
         }
         .navbar {
             height: 60px; /* Adjust height as needed */
             background-color: #E0AED0; /* Light pastel blue */
             display: flex;
-            bottom: 0; /* Stick to bottom */
             justify-content: center;
             align-items: center;
             position: fixed; /* Stick to bottom */
+            bottom: 0; /* Stick to bottom */
             width: 100%; /* Take full width */
         }
         .navbar ul {
@@ -77,14 +138,26 @@
         <a href="index.html"><div class="icon"></div></a>
     </div>
     <div class="container">
-        <div class="navbar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Socials</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+        <h1>Social Media Hub</h1>
+        <ul class="social-links">
+            <li><a href="#">F</a></li>
+            <li><a href="#">T</a></li>
+            <li><a href="#">I</a></li>
+            <!-- Add more social media links as needed -->
+        </ul>
+        <div class="section">
+            <h3 class="section-content">Been trying to startup my youtube for a longtime, however I commonly post on my Twitter and I am active on my Discord account. 
+                If you want to friend me on Steam, go ahead however don't be weird and try to be polite. 
+                I may not respond or accept any friend requests if I do not know who you are.</h3>
         </div>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Socials</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </div>
 </body>
 </html>
