@@ -73,6 +73,60 @@
         .icon:hover {
             opacity: 0.7; /* Reduce opacity on hover for visual feedback */
         }
+        /* Styles for the gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image {
+            margin: 10px;
+            cursor: pointer;
+
+        }
+
+        .image img {
+            width: 200px;
+            border-color: #AC87C5;
+            height: auto;
+            border-radius: 5%;
+        }
+
+        /* Styles for the description modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            transition: background-color 0.3s ease;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 20% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -83,9 +137,61 @@
         <!-- Content of your homepage here -->
         <div class="content">
             <!-- Your content goes here -->
-            <div class="portfolioitems">
-                
+            <div class="gallery">
+                <div class="image" onclick="showDescription('image1')">
+                    <img src="assets/images/photography/flower1.JPG" alt="Flower1">
+                </div>
+                <div class="image" onclick="showDescription('image2')">
+                    <img src="image2.jpg" alt="Image 2">
+                </div>
+                <!-- Add more images as needed -->
             </div>
+        
+            <div id="descriptionModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeDescription()">&times;</span>
+                    <h2 id="descriptionTitle"></h2>
+                    <p id="descriptionText"></p>
+                </div>
+            </div>
+        
+            <script>
+                function showDescription(imageId) {
+                    var modal = document.getElementById('descriptionModal');
+                    var title = document.getElementById('descriptionTitle');
+                    var text = document.getElementById('descriptionText');
+        
+                    // Set the title and text based on the imageId
+                    switch (imageId) {
+                        case 'image1':
+                            title.textContent = 'Image 1';
+                            text.textContent = 'Description for Image 1';
+                            break;
+                        case 'image2':
+                            title.textContent = 'Image 2';
+                            text.textContent = 'Description for Image 2';
+                            break;
+                        // Add more cases as needed
+                        default:
+                            title.textContent = '';
+                            text.textContent = '';
+                    }
+        
+                    modal.style.display = 'block';
+                }
+        
+                function closeDescription() {
+                    document.getElementById('descriptionModal').style.display = 'none';
+                }
+        
+                // Close the modal when clicking outside of it
+                window.onclick = function(event) {
+                    var modal = document.getElementById('descriptionModal');
+                    if (event.target == modal) {
+                        modal.style.display = 'none';
+                    }
+                }
+            </script>
         </div>
         <!-- Navigation bar -->
         <div class="navbar">
