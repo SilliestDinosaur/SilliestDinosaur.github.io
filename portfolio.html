@@ -26,7 +26,7 @@
         }
         .navbar {
             height: 60px; /* Adjust height as needed */
-            background-color: #E0AED0; /* Light pastel blue */
+            background-color: #E0AED0;
             display: flex;
             bottom: 0; /* Stick to bottom */
             justify-content: center;
@@ -78,6 +78,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            margin-top: 35px;
         }
 
         .image {
@@ -107,11 +108,12 @@
         }
 
         .modal-content {
-            background-color: #fefefe;
+            background-color: #FFE5E5;
             margin: 20% auto;
             padding: 20px;
             border: 1px solid #888;
             width: 80%;
+            color: #322C2B;
         }
 
         .close {
@@ -142,7 +144,20 @@
                     <img src="assets/images/photography/flower1.JPG" alt="Flower1">
                 </div>
                 <div class="image" onclick="showDescription('image2')">
-                    <img src="image2.jpg" alt="Image 2">
+                    <img src="assets/images/photography/feather1.JPG" alt="feather1">
+                </div>
+                <div class="image" onclick="showDescription('image3')">
+                    <img src="assets/images/photography/lighter1.JPG" alt="lighter1">
+                </div>
+                <div class="image" onclick="showDescription('image4')">
+                    <img src="assets/images/photography/bucket1.JPG" alt="bucket1">
+                </div>
+                <br>
+                <div class="image" onclick="showDescription('image5')">
+                    <img src="assets/images/photography/scrap1.JPG" alt="scrap1">
+                </div>
+                <div class="image" onclick="showDescription('image6')">
+                    <img src="assets/images/photography/can1.JPG" alt="can1">
                 </div>
                 <!-- Add more images as needed -->
             </div>
@@ -164,12 +179,28 @@
                     // Set the title and text based on the imageId
                     switch (imageId) {
                         case 'image1':
-                            title.textContent = 'Image 1';
-                            text.textContent = 'Description for Image 1';
+                            title.textContent = 'Flower';
+                            text.textContent = 'A flower I took a photo of down by the Olentangy River.';
                             break;
                         case 'image2':
-                            title.textContent = 'Image 2';
-                            text.textContent = 'Description for Image 2';
+                            title.textContent = 'Feather';
+                            text.textContent = 'A photo I took of a cool feather I found down by the Olentangy River.';
+                            break;
+                        case 'image3':
+                            title.textContent = 'Lighter';
+                            text.textContent = 'I found a cool lighter by the river, and I tried getting a close up shot of it, sort of inspired by honey I shrunk the kids lol.';
+                            break;
+                        case 'image4':
+                            title.textContent = 'Bucket';
+                            text.textContent = 'On the same trip that I found the lighter and feather, I found this rusted bucket and it seemed pretty old, so I took a pic and thought it looked pretty nice.';
+                            break;
+                        case 'image5':
+                            title.textContent = 'Scrap';
+                            text.textContent = 'A bunch of scrap I found by the river as well! I think this is probably at least 50ish years old because the area used to be all farmland.';
+                            break;
+                        case 'image6':
+                            title.textContent = 'Can';
+                            text.textContent = 'Yet another can found by the river. Tons of trash over there unfortunately, however I thought this contrasted nicely with the green and brown background so I decided to take a pic.';
                             break;
                         // Add more cases as needed
                         default:
