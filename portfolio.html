@@ -92,6 +92,12 @@
             border-color: #AC87C5;
             height: auto;
             border-radius: 5%;
+            transition: box-shadow 0.15s;
+        }
+
+        .image img:hover,
+        .image img:focus{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
         }
 
         /* Styles for the description modal */
@@ -111,21 +117,23 @@
             background-color: #FFE5E5;
             margin: 20% auto;
             padding: 20px;
-            border: 1px solid #888;
+            border-radius: 25px;
+            border: 5px solid #AC87C5;
             width: 80%;
             color: #322C2B;
         }
 
         .close {
-            color: #aaa;
+            color: black;
             float: right;
             font-size: 28px;
             font-weight: bold;
+            transition: text-shadow 0.15s; /* Hover effect */
         }
 
         .close:hover,
         .close:focus {
-            color: black;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             text-decoration: none;
             cursor: pointer;
         }
