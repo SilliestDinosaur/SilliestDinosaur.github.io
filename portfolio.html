@@ -110,7 +110,7 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0,0,0,0.7);
-            transition: opacity 0.3s; /* Fade effect */
+            transition: opacity 0.3s ease; /* Fade effect */
         }
 
         .modal-content {
@@ -171,7 +171,7 @@
         
             <div id="descriptionModal" class="modal">
                 <div class="modal-content">
-                    <span class="close" onclick="closeDescription()">&times;</span>
+                    <span class="close" onclick="closeDescription()">x</span>
                     <h2 id="descriptionTitle"></h2>
                     <p id="descriptionText"></p>
                 </div>
@@ -187,27 +187,27 @@
                     switch (imageId) {
                         case 'image1':
                             title.textContent = 'Flower';
-                            text.textContent = 'A flower I took a photo of down by the Olentangy River.';
+                            text.textHTML = 'A photo I took of a feather I found down by the Olentangy River.<br><br>Location: Olentangy River, Delaware Ohio<br>Date: April 6th, 2024';
                             break;
                         case 'image2':
                             title.textContent = 'Feather';
-                            text.textContent = 'A photo I took of a cool feather I found down by the Olentangy River.';
+                            text.textHTML = 'A photo I took of a cool feather I found down by the Olentangy River.<br><br>Location: Olentangy River, Delaware Ohio<br>Date: April 6th, 2024';
                             break;
                         case 'image3':
                             title.textContent = 'Lighter';
-                            text.textContent = 'I found a cool lighter by the river, and I tried getting a close up shot of it, sort of inspired by honey I shrunk the kids lol.';
+                            text.textHTML = 'I found a cool lighter by the river, and I tried getting a close up shot of it, sort of inspired by honey I shrunk the kids lol.<br><br>Location: Olentangy River, Delaware Ohio<br>Date: April 6th, 2024';
                             break;
                         case 'image4':
                             title.textContent = 'Bucket';
-                            text.textContent = 'On the same trip that I found the lighter and feather, I found this rusted bucket and it seemed pretty old, so I took a pic and thought it looked pretty nice.';
+                            text.textHTML = 'On the same trip that I found the lighter and feather, I found this rusted bucket and it seemed pretty old, so I took a pic and thought it looked pretty nice.<br><br>Location: Olentangy River, Delaware Ohio<br>Date: April 6th, 2024';
                             break;
                         case 'image5':
                             title.textContent = 'Scrap';
-                            text.textContent = 'A bunch of scrap I found by the river as well! I think this is probably at least 50ish years old because the area used to be all farmland.';
+                            text.textHTML = 'A bunch of scrap I found by the river as well! I think this is probably at least 50ish years old because the area used to be all farmland.<br><br>Location: Olentangy River, Delaware Ohio<br>Date: April 6th, 2024';
                             break;
                         case 'image6':
                             title.textContent = 'Can';
-                            text.textContent = 'Yet another can found by the river. Tons of trash over there unfortunately, however I thought this contrasted nicely with the green and brown background so I decided to take a pic.';
+                            text.innerHTML = 'Yet another can found by the river. Tons of trash over there unfortunately, however I thought this contrasted nicely with the green and brown background so I decided to take a pic.<br><br>Location: Olentangy River, Delaware Ohio<br>Date: April 6th, 2024';
                             break;
                         // Add more cases as needed
                         default:
