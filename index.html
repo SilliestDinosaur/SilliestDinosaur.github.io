@@ -26,7 +26,7 @@
         }
         .navbar {
             height: 60px; /* Adjust height as needed */
-            background-color: #E0AED0; /* Light pastel blue */
+            background-color: #E0AED0; /* Light pastel pink */
             display: flex;
             bottom: 0; /* Stick to bottom */
             justify-content: center;
@@ -76,13 +76,18 @@
             padding: 20px;
             margin-top: 50vh; /* Vertically center the text based on viewport height */
             transform: translateY(-70%); /* Correct vertical centering */
-            transition: text-shadow 0.3s ease; /* Smooth transition for text shadow */
             cursor: pointer; /* Change cursor to pointer on hover */
             user-drag: none; /* Make the icon not draggable */
             -webkit-user-drag: none; /* For older versions of Safari */
+            transition: color 0.15s ease, text-shadow 0.3s ease; /* Smooth transition for text transformation */
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-origin: top left;
         }
         .centered-text:hover {
-            text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4); /* Larger text shadow on hover */
+            color: #AC87C5; /* Slide text to the left on hover */
+            text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1);
         }
     </style>
 </head>
@@ -90,7 +95,7 @@
     <div class="top-bar">
         <div class="icon"></div>
     </div>
-    <div class="centered-text"><a class="centered-text" href="portfolio.html" style="text-decoration:none">DINOCAT</a></div>
+    <div class="centered-text" id="text">DINOCAT</div>
     <div class="container">
         <!-- Content of your homepage here -->
         <div class="content">
@@ -106,5 +111,16 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        // JavaScript function to change text content on hover
+        var textElement = document.getElementById("text");
+        textElement.onmouseover = function() {
+            textElement.innerHTML = "Portfolio";
+        };
+        textElement.onmouseout = function() {
+            textElement.innerHTML = "DINOCAT";
+        };
+    </script>
 </body>
 </html>
