@@ -80,14 +80,17 @@
             user-drag: none; /* Make the icon not draggable */
             -webkit-user-drag: none; /* For older versions of Safari */
             transition: color 0.15s ease, text-shadow 0.3s ease; /* Smooth transition for text transformation */
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 2);
             transform-origin: top left;
+            line-height: 0;
+            text-decoration: none;
         }
         .centered-text:hover {
             color: #AC87C5; /* Slide text to the left on hover */
-            text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
-            -webkit-transform: scale3d(1.1, 1.1, 1.1);
-            transform: scale3d(1.1);
+            text-shadow: 6px 6px 14px rgba(0, 0, 0, 0.4);
+            text-decoration: none;
+            -webkit-transform: translateY(-65) scale3d(1, 1, 1); /* Adjust translateY value */
+    transform: translateY(-65%) scale3d(1, 1, 1); /* Adjust translateY value */
         }
     </style>
 </head>
@@ -95,7 +98,7 @@
     <div class="top-bar">
         <div class="icon"></div>
     </div>
-    <div class="centered-text" id="text">DINOCAT</div>
+    <div class="centered-text" id="text"><a href="portfolio.html">DINOCAT</a></div>
     <div class="container">
         <!-- Content of your homepage here -->
         <div class="content">
