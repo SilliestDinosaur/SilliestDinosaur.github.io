@@ -76,7 +76,6 @@
             padding: 20px;
             margin-top: 50vh; /* Vertically center the text based on viewport height */
             transform: translateY(-70%); /* Correct vertical centering */
-            cursor: pointer; /* Change cursor to pointer on hover */
             user-drag: none; /* Make the icon not draggable */
             -webkit-user-drag: none; /* For older versions of Safari */
             transition: color 0.15s ease, text-shadow 0.3s ease; /* Smooth transition for text transformation */
@@ -84,13 +83,16 @@
             transform-origin: top left;
             line-height: 0;
             text-decoration: none;
+            display: inline-block; /* Ensures the anchor covers the entire area of the text */
+            width: 100%; /* Occupy full width */
         }
         .centered-text:hover {
             color: #AC87C5; /* Slide text to the left on hover */
+            cursor: pointer; /* Change cursor to pointer on hover */
             text-shadow: 6px 6px 14px rgba(0, 0, 0, 0.4);
             text-decoration: none;
             -webkit-transform: translateY(-65) scale3d(1, 1, 1); /* Adjust translateY value */
-    transform: translateY(-65%) scale3d(1, 1, 1); /* Adjust translateY value */
+            transform: translateY(-65%) scale3d(1, 1, 1); /* Adjust translateY value */
         }
     </style>
 </head>
@@ -98,7 +100,7 @@
     <div class="top-bar">
         <div class="icon"></div>
     </div>
-    <div class="centered-text" id="text">DINOCAT</div>
+    <a href="portfolio.html" class="centered-text" id="text">DINOCAT</a>
     <div class="container">
         <!-- Content of your homepage here -->
         <div class="content">
@@ -119,7 +121,7 @@
         // JavaScript function to change text content on hover
         var textElement = document.getElementById("text");
         textElement.onmouseover = function() {
-            textElement.innerHTML = "Portfolio";
+            textElement.innerHTML = "PORTFOLIO";
         };
         textElement.onmouseout = function() {
             textElement.innerHTML = "DINOCAT";
