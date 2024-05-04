@@ -14,7 +14,40 @@
             padding: 0;
             font-family: "Josefin Sans";
             color: #555; /* Dark gray text */
+            position: relative; /* Make body relative for absolute positioning of triangles */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
+
+        /* Purple triangle on the bottom edge */
+        body::after {
+            content: "";
+            position: fixed;
+            bottom: 60px; /* Height of the navbar */
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 100px 100vw 0 0; /* Adjust size as needed */
+            border-color: #E0AED0 transparent transparent transparent; /* Adjust color */
+            transform: scaleY(-1); /* Mirroring the triangle vertically */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        /* Purple triangle on the top edge */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 160px 100vw 0 100vw; /* Adjust size as needed */
+            border-color: #AC87C5 transparent transparent transparent; /* Adjust color */
+            overflow-y: hidden; /* Prevent vertical scrolling */
+            overflow-x: hidden; /* Prevent vertical scrolling */
+        }
+        
         .container {
             flex: 1; /* Occupy remaining vertical space */
             display: flex;
