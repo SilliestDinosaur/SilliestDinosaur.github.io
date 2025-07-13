@@ -1,0 +1,113 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfaf6;
+    color: #3d3d3d;
+  }
+  
+  nav {
+    background-color: #ffecd1;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav h1 {
+    color: #2e1b0e;
+    font-size: 1.5rem;
+  }
+  
+  .nav-links a {
+    margin-left: 1rem;
+    color: #ce6b28;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .gallery-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 200px;
+    padding: 1rem;
+    background-color: #fff5eb;
+    border-bottom: 2px solid #f0e3d0;
+  }
+  
+  .gallery-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .gallery-item {
+    height: 180px;
+    width: auto;
+    margin-right: 1rem;
+    border-radius: 0.75rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  
+  .gallery-item.hovered {
+    transform: scale(1.2);
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2rem;
+  }
+  
+  .card {
+    background: #fffefc;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f0e3d0;
+  }
+  
+  .card h2 {
+    color: #ce6b28;
+    margin-bottom: 1rem;
+  }
+  
+  .project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .project-list li {
+    background-color: #f8f4ef;
+    border: 1px solid #d5c4b1;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-list h3 {
+    color: #2e1b0e;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .project-list a {
+    display: inline-block;
+    background-color: #ce6b28;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-list a:hover {
+    background-color: #9f4b1c;
+  }

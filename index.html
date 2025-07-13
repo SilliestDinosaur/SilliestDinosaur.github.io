@@ -1,0 +1,77 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DINOCAT</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <h1>DINOCAT</h1>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+    </div>
+  </nav>
+
+  <div class="gallery-scroll" id="gallery">
+    <!-- Images will be injected here -->
+  </div>
+
+  <main class="container">
+    <section class="card">
+      <h2>About Me</h2>
+      <p>Hi there, I'm Gabriel, also known as Dinocat. I am a game developer since the age of around 6, and have been making projects often since. I make all sorts of projects, but mostly work on whatever I am interested in. I am currently 15, and enjoy drawing, 3d artwork, music production, and more. I am also a furry, though I don't really associate myself with most of the "furry community" so to speak.. I am currently in high-school, and I enjoy games like Escape From Tarkov, Airsoft, and more. I frequently work on 3D printing things as well.</p>
+      <p>With this website, you can download and view all my projects as I work on them. Enjoy!</p>
+    </section>
+  </main>
+
+  <script>
+    const images = [
+      "img/img1.png", "img/img2.jpg", "img/img3.png", "img/img4.jpg",
+      "img/img5.png", "img/img6.jpg", "img/img7.jpg", "img/img8.png",
+      "img/img9.jpg", "img/img10.jpg", "img/img11.png", "img/img12.png",
+      "img/img13.jpg", "img/img14.jpg", "img/img15.png", "img/img16.jpg",
+      "img/img17.jpg", "img/img18.png"
+    ];
+
+    const gallery = document.getElementById('gallery');
+    let hoverPause = false;
+    let hoveredIndex = -1;
+
+    images.forEach((src, index) => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.classList.add('gallery-item');
+      img.alt = `Gallery Image ${index + 1}`;
+      img.addEventListener('mouseenter', () => {
+        img.classList.add('hovered');
+        hoverPause = true;
+        hoveredIndex = index;
+      });
+      img.addEventListener('mouseleave', () => {
+        img.classList.remove('hovered');
+        hoverPause = false;
+        hoveredIndex = -1;
+      });
+      img.addEventListener('click', () => {
+        window.open(src, '_blank');
+      });
+      gallery.appendChild(img);
+    });
+
+    let scrollX = 0;
+    setInterval(() => {
+      if (!hoverPause || hoveredIndex === -1) {
+        scrollX += 1;
+        gallery.scrollLeft = scrollX;
+        if (scrollX >= gallery.scrollWidth - gallery.clientWidth) {
+          scrollX = 0;
+        }
+      }
+    }, 30);
+  </script>
+</body>
+</html>
